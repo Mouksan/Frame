@@ -197,7 +197,7 @@ async function showIigConfirm(title, text) {
 const MODULE_NAME = 'inline_image_gen';
 // Ported from the fork: six NPC slots instead of the stock four.
 const IIG_NPC_SLOT_COUNT = 6;
-const IIG_VERSION = '3.3.0';
+const IIG_VERSION = '3.4.1';
 
 const _BUILD_SEED_DELTA = [2, 2, 0, 9, 8, 1];
 function stableBuildHash(input) {
@@ -13034,7 +13034,7 @@ function createSettingsUI() {
                     </button>
 
                     <p class="hint" style="text-align:center;opacity:0.5;margin-top:4px;">
-                        v${IIG_VERSION} <span data-i18n="iig_ui_by">by</span> <a href="https://github.com/aceeenvw/notsosillynotsoimages" target="_blank" style="color:inherit;text-decoration:underline;">aceenvw</a>
+                        v${IIG_VERSION} · Mouksan · по мотивам <a href="https://github.com/aceeenvw/notsosillynotsoimages" target="_blank" style="color:inherit;text-decoration:underline;">notsosillynotsoimages</a> (aceenvw)
                     </p>
                     <p id="iig_session_stats" class="hint" style="text-align:center;opacity:0.35;margin-top:2px;font-size:0.8em;"></p>
                 </div>
