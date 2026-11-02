@@ -4428,7 +4428,7 @@ function exportStylesToFile() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `frameweaver-styles-${stamp}.json`;
+    link.download = `frame-styles-${stamp}.json`;
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -4446,7 +4446,7 @@ function parseStylesBackup(text) {
         throw new Error('Файл не читается как JSON');
     }
     if (!parsed || parsed.spec !== STYLES_BACKUP_SPEC) {
-        throw new Error('Это не файл стилей Frameweaver');
+        throw new Error('Это не файл стилей Frame');
     }
     if (!Array.isArray(parsed.styles)) {
         throw new Error('В файле нет списка стилей');
@@ -12201,7 +12201,7 @@ const IIG_UI_I18N = {
         appearanceCleared: 'Appearance note cleared',
         appearanceLong: 'Long notes compete with the scene prompt',
         unnamedSlot: 'unnamed slot',
-        title: '⊹ INLINE IMAGE GENERATION ⊹',
+        title: '「 FRAME 」',
         intro: 'Configure your provider, generation defaults and character references.',
         enabled: 'Enable image generation',
         promptDriven: 'Use generation settings from tags',
@@ -12390,7 +12390,7 @@ const IIG_UI_I18N = {
         appearanceCleared: 'Описание очищено',
         appearanceLong: 'Длинное описание перебивает промпт сцены',
         unnamedSlot: 'слот без имени',
-        title: '⊹ INLINE IMAGE GENERATION ⊹',
+        title: '「 FRAME 」',
         intro: 'Настройте провайдера, параметры генерации по умолчанию и референсы персонажей.',
         enabled: 'Включить генерацию изображений',
         promptDriven: 'Использовать параметры генерации из тегов',
@@ -12583,7 +12583,7 @@ function createSettingsUI() {
     const html = `
         <div class="inline-drawer">
             <div class="inline-drawer-toggle inline-drawer-header">
-                <b><span data-i18n="iig_ui_title">⊹ INLINE IMAGE GENERATION ⊹</span></b>
+                <b><i class="fa-solid fa-image" style="margin-right: 6px;"></i><span data-i18n="iig_ui_title">「 FRAME 」</span></b>
                 <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
             </div>
             <div class="inline-drawer-content">
