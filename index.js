@@ -25,7 +25,7 @@
  * you must retain this copyright notice and provide attribution to the
  * original author (aceeenvw) in a prominent location (file header,
  * README, or UI credits).
- */
+ */ 
 
 import { chat_completion_sources, createGenerationParameters, getChatCompletionModel, promptManager } from '/scripts/openai.js';
 import { playMessageSound } from '/scripts/power-user.js';
